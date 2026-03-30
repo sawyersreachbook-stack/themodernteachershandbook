@@ -24,9 +24,8 @@
             scroll-behavior: smooth;
         }
 
-        /* Hero - Atmospheric and Personal */
         header {
-            height: 95vh;
+            height: 90vh;
             background: linear-gradient(rgba(18, 31, 18, 0.7), rgba(18, 31, 18, 0.9)), 
                         url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=2560');
             background-size: cover;
@@ -81,32 +80,63 @@
             letter-spacing: 1px;
             transition: 0.3s;
             border: none;
+            cursor: pointer;
         }
 
         .btn-main:hover { transform: translateY(-2px); filter: brightness(1.1); }
 
-        /* The "Friend" Voice - Core Message */
-        .personal-note {
+        /* BIO SECTION */
+        .bio-section {
             padding: 100px 20px;
-            max-width: 800px;
+            background: #fff;
+        }
+
+        .bio-container {
+            max-width: 1100px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-item {
+            background: var(--paper);
+            padding: 20px;
+            border-top: 3px solid var(--accent-orange);
+        }
+
+        .stat-item h4 { font-family: 'Montserrat'; margin: 0; color: var(--forest-dark); font-size: 0.9rem; text-transform: uppercase; }
+        .stat-item p { margin: 5px 0 0; font-size: 0.85rem; line-height: 1.4; }
+
+        /* COACH SECTION */
+        .coach-top-bar {
+            background: white;
+            padding: 60px 20px;
             text-align: center;
+            border-bottom: 1px solid #eee;
         }
 
-        .personal-note h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            color: var(--forest-dark);
-            margin-bottom: 30px;
+        .coach-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--paper);
+            border: 2px solid var(--forest-dark);
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            text-align: left;
         }
 
-        .personal-note p {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            margin-bottom: 25px;
-        }
-
-        /* Three Parts - Educational & Honest */
+        /* BOOK BREAKDOWN */
         .book-breakdown {
             background: #f4f2ee;
             padding: 100px 20px;
@@ -117,7 +147,7 @@
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 40px;
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 40px auto 0;
         }
 
         .part-card {
@@ -126,37 +156,77 @@
             border-bottom: 4px solid var(--forest-dark);
         }
 
-        .part-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.4rem;
-            margin-top: 0;
-            color: var(--forest-dark);
-        }
+        .part-card span { display: block; color: var(--accent-orange); font-family: Montserrat; font-weight: 700; font-size: 0.8rem; margin-bottom: 10px; }
 
-        .part-card span {
-            display: block;
-            font-family: 'Montserrat';
-            font-weight: 700;
-            color: var(--accent-orange);
-            font-size: 0.8rem;
-            margin-bottom: 15px;
-        }
-
-        /* AI Coach Section */
-        .ai-section {
+        /* CONSULTING SECTION */
+        .services-section {
+            padding: 100px 20px;
             background: var(--forest-dark);
             color: #fff;
-            padding: 100px 20px;
-            text-align: center;
         }
 
-        .ai-section h2 { font-family: 'Playfair Display'; font-size: 2.5rem; }
-        .ai-section p { max-width: 650px; margin: 20px auto 40px; color: #ccc; font-size: 1.1rem; }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 40px auto 0;
+        }
 
-        /* Ecosystem */
+        .service-box {
+            padding: 40px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .service-box h3 { font-family: 'Montserrat'; color: var(--accent-orange); font-size: 1.1rem; text-transform: uppercase; margin-bottom: 15px; }
+
+        /* ORDER SECTION */
+        .order-section {
+            padding: 100px 20px;
+            text-align: center;
+            background: white;
+        }
+
+        .order-container {
+            max-width: 600px;
+            margin: 40px auto 0;
+            background: var(--paper);
+            padding: 50px;
+            border: 1px solid #eee;
+        }
+
+        .order-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .order-btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 20px 25px;
+            text-decoration: none;
+            color: var(--ink);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            transition: 0.3s;
+        }
+
+        .order-btn:hover { border-color: var(--accent-orange); color: var(--accent-orange); transform: translateX(5px); }
+        .order-btn span.tag { font-family: 'Lora'; text-transform: none; font-weight: normal; color: #777; font-style: italic; font-size: 0.8rem; }
+
+        /* ECOSYSTEM SECTION */
         .ecosystem {
             padding: 80px 20px;
             text-align: center;
+            background: #fdfcf9;
+            border-top: 1px solid #eee;
         }
 
         .eco-links {
@@ -176,6 +246,7 @@
             font-weight: 700;
             font-size: 0.75rem;
             text-transform: uppercase;
+            transition: 0.3s;
         }
 
         .eco-links a:hover { border-color: var(--accent-orange); color: var(--accent-orange); }
@@ -188,8 +259,9 @@
             font-size: 0.8rem;
         }
 
-        @media (max-width: 850px) {
-            .hero-container { flex-direction: column; text-align: center; }
+        @media (max-width: 900px) {
+            .bio-container { grid-template-columns: 1fr; }
+            .hero-container, .coach-card { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
@@ -198,53 +270,124 @@
     <header>
         <div class="hero-container">
             <div class="book-visual">
-                <img src="your-book-picture.png" alt="The Modern Teacher's Handbook Cover" class="book-img">
+                <img src="https://raw.githubusercontent.com/sawyersreachbook-stack/themodernteachershandbook/main/ModernTeacher.png" alt="The Modern Teacher's Handbook" class="book-img">
             </div>
             <div class="hero-text">
                 <h1>The Modern<br>Teacher's Handbook</h1>
                 <p class="hero-tagline">"You deserve to find the happiness you truly deserve as an educator."</p>
                 <p>Teaching is one of the hardest things a human can do. I wrote this handbook for the exhausted veterans and the struggling newcomers—because after 22 years in the classroom, I know we need solutions that actually work.</p>
-                <a href="#buy" class="btn-main" style="margin-top: 20px;">Order Your Copy</a>
+                <a href="#order" class="btn-main" style="margin-top: 20px;">Order Your Copy</a>
             </div>
         </div>
     </header>
 
-    <section class="personal-note">
-        <h2>A Solution for the Modern Classroom</h2>
-        <p>I truly believe that I have developed a solution to many of the issues we are facing today in education. I’m not here to give you another corporate buzzword or an app that will be obsolete in six months.</p>
-        <p>I want your classroom to be a place you look forward to going to every day. This book is about reclaiming your peace, helping your students flourish, and getting back to the human heart of what we do.</p>
-        <div style="font-size: 40px; margin-top: 30px;">🏫</div>
-    </section>
-
-    <section class="book-breakdown">
-        <div class="parts-grid">
-            <div class="part-card">
-                <span>PART I</span>
-                <h3>The Duda Model for Modern Education</h3>
-                <p>We start with the foundation. I’ll walk you through the five pillars—Connections, Mindfulness, Unconditional Support, Growth Mindset, and SEL—showing you how to build a classroom culture where students are actually excited to be there.</p>
+    <section class="bio-section">
+        <div class="bio-container">
+            <div>
+                <h2 style="font-family: Playfair Display; font-size: 2.5rem; line-height: 1.2;">The Educator Behind the Handbook</h2>
+                <p style="font-size: 1.2rem; margin-top: 20px;"><strong>Nick Duda (M.S. Ed)</strong> is on a mission to help teachers reclaim the joy in their profession.</p>
+                <p>With 22 years of experience spanning urban districts, rural Illinois, and everything in between, Nick has seen firsthand the toll the modern classroom takes on educators. He is a veteran mentor who has received <strong>six consecutive "Excellent" evaluations</strong>, proving that fulfillment and professional success go hand-in-hand. Whether he's teaching Mathematics or consulting for districts, Nick focuses on what truly matters: the human connection and the mental well-being of the teacher.</p>
             </div>
-            <div class="part-card">
-                <span>PART II</span>
-                <h3>Lessons I Have Learned in My Career</h3>
-                <p>This is the "honest talk" section. I share the real-world experiences from my 22+ years in the classroom, covering everything from professional development and mentoring to the self-care that keeps us in this game for the long haul.</p>
-            </div>
-            <div class="part-card">
-                <span>PART III</span>
-                <h3>Techniques to Positively Navigate School and Classroom Dynamics</h3>
-                <p>Teaching is a social science. Here, we look at how to navigate the complex relationships with students, parents, administrators, and coworkers without losing your sanity or your integrity.</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h4>6/6 Evaluations</h4>
+                    <p>Consistent "Excellent" Ratings for Instructional Practice</p>
+                </div>
+                <div class="stat-item">
+                    <h4>22+ Years</h4>
+                    <p>Battle-tested classroom experience in all environments</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Fulfillment Expert</h4>
+                    <p>Personal Teacher & Life Coach for Professional Happiness</p>
+                </div>
+                <div class="stat-item">
+                    <h4>MS in Education</h4>
+                    <p>Master's Degree & Multi-Subject Certification</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="ai-section">
-        <h2>A Mentor Whenever You Need One</h2>
-        <p>If you're facing a specific challenge right now, I've built the <strong>Modern Teacher Coach</strong> at askkaela.com. It’s an AI mentor trained on the Duda Model, designed to give you warm, grounded advice whenever you're feeling stuck.</p>
-        <a href="https://www.askkaela.com/teacher" class="btn-main" style="background: #fff; color: var(--forest-dark);">Talk to the Coach</a>
+    <section class="coach-top-bar">
+        <div class="coach-card">
+            <div style="font-size: 60px;">🤖</div>
+            <div>
+                <h2>Find Your Focus Instantly</h2>
+                <p>Feeling overwhelmed right now? Talk to the <strong>Modern Teacher Coach</strong>. This AI mentor is trained on Nick's philosophies to help you cut through the noise, prioritize your peace, and focus on what’s truly important in your classroom today.</p>
+                <a href="https://www.askkaela.com/teacher" class="btn-main" style="padding: 12px 30px; font-size: 0.8rem;">Chat with the Coach</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="book-breakdown">
+        <div style="text-align:center; margin-bottom: 20px;">
+            <h2 style="font-family: Playfair Display; font-size: 2.5rem;">Inside the Handbook</h2>
+        </div>
+        <div class="parts-grid">
+            <div class="part-card">
+                <span>PART I</span>
+                <h3 style="font-family: Montserrat; margin: 0;">The Duda Model</h3>
+                <p>The foundation of a happy classroom: Connections, Mindfulness, Unconditional Support, Growth Mindset, and SEL.</p>
+            </div>
+            <div class="part-card">
+                <span>PART II</span>
+                <h3 style="font-family: Montserrat; margin: 0;">Lessons in Longevity</h3>
+                <p>Real-talk on self-care and professional growth—sharing the honest secrets to staying in the game for over two decades.</p>
+            </div>
+            <div class="part-card">
+                <span>PART III</span>
+                <h3 style="font-family: Montserrat; margin: 0;">Navigating the Human Side</h3>
+                <p>Mastering the social dynamics of school life so you can protect your peace while serving your students and community.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+            <h2 style="font-family: Playfair Display; font-size: 2.5rem;">Professional Coaching & Consulting</h2>
+            <p>Moving education away from burnout and toward a culture of positive growth and teacher fulfillment.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-box">
+                <h3>Teacher Happiness Coaching</h3>
+                <p>One-on-one personal coaching designed to help educators rediscover their passion, set healthy boundaries, and find true fulfillment in their careers.</p>
+            </div>
+            <div class="service-box">
+                <h3>Positive Culture Design</h3>
+                <p>Consulting for school leadership on building a supportive, positive atmosphere that values teachers as humans, not just resources.</p>
+            </div>
+            <div class="service-box">
+                <h3>Workshops & Speaking</h3>
+                <p>Engaging sessions for PD days focused on the Duda Model, mindfulness in the classroom, and creating a sustainable teaching life. See my STEM insights on <strong><a href="https://youtube.com/STEMwithMrDuda" style="color: var(--accent-orange); text-decoration: none;">YouTube</a></strong>.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="mailto:your-email@example.com" class="btn-main">Work with Nick</a>
+        </div>
+    </section>
+
+    <section class="order-section" id="order">
+        <h2 style="font-family: Playfair Display; font-size: 2.5rem;">Order Your Copy</h2>
+        <p>Start your journey toward a more fulfilled teaching life today.</p>
+        
+        <div class="order-container">
+            <div class="order-links">
+                <a href="https://bookshop.org/p/books/the-modern-teacher-s-handbook-your-ultimate-guide-to-success-in-education-nick-duda/fd7aa561d473070d?ean=9798986450308&next=t&next=t&affiliate=89280" class="order-btn">
+                    Hardback <span class="tag">Order via Bookshop.org</span>
+                </a>
+                <a href="https://bookshop.org/p/books/the-modern-teacher-s-handbook-your-ultimate-guide-to-success-in-education-nick-duda/fd7aa561d473070d?ean=9798986450315&next=t&next=t&affiliate=89280" class="order-btn">
+                    Paperback <span class="tag">Order via Bookshop.org</span>
+                </a>
+                <div class="order-btn" style="opacity: 0.5; cursor: not-allowed; border-style: dashed;">
+                    EBook <span class="tag">Digital Link Coming Soon</span>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="ecosystem">
-        <h3>Explore the World of Nick Duda</h3>
-        <p style="color: #888;">From sci-fi thrillers to human-centered AI, everything I do is about helping people flourish.</p>
+        <h3 style="font-family: Montserrat; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 2px;">Explore the World of Nick Duda</h3>
         <div class="eco-links">
             <a href="https://sawyersreachbook.com">Sawyer's Reach Book & Podcast</a>
             <a href="https://askkaela.com">The Institute & AI Tools</a>
@@ -254,7 +397,7 @@
 
     <footer>
         <p>&copy; 2026 NICK DUDA | TEACHER • AUTHOR • DAD</p>
-        <p style="margin-top: 10px; font-size: 0.7rem; letter-spacing: 1px;">COVER ART & ILLUSTRATIONS BY EMILY VELAZQUEZ</p>
+        <p style="margin-top: 10px; font-size: 0.7rem; letter-spacing: 1px; opacity: 0.6;">COVER ART & ILLUSTRATIONS BY EMILY VELAZQUEZ</p>
     </footer>
 
 </body>
