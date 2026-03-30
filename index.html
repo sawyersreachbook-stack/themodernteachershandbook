@@ -85,10 +85,28 @@
 
         .btn-main:hover { transform: translateY(-2px); filter: brightness(1.1); }
 
+        /* TESTIMONIAL SECTION */
+        .blurb-section {
+            background: #fff;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .blurb-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            line-height: 1.6;
+            color: var(--forest-dark);
+            font-style: italic;
+        }
+
         /* BIO SECTION */
         .bio-section {
             padding: 100px 20px;
-            background: #fff;
+            background: var(--paper);
         }
 
         .bio-container {
@@ -108,9 +126,10 @@
         }
 
         .stat-item {
-            background: var(--paper);
+            background: #fff;
             padding: 20px;
             border-top: 3px solid var(--accent-orange);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
         }
 
         .stat-item h4 { font-family: 'Montserrat'; margin: 0; color: var(--forest-dark); font-size: 0.9rem; text-transform: uppercase; }
@@ -221,36 +240,6 @@
         .order-btn:hover { border-color: var(--accent-orange); color: var(--accent-orange); transform: translateX(5px); }
         .order-btn span.tag { font-family: 'Lora'; text-transform: none; font-weight: normal; color: #777; font-style: italic; font-size: 0.8rem; }
 
-        /* ECOSYSTEM SECTION */
-        .ecosystem {
-            padding: 80px 20px;
-            text-align: center;
-            background: #fdfcf9;
-            border-top: 1px solid #eee;
-        }
-
-        .eco-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-
-        .eco-links a {
-            padding: 15px 30px;
-            border: 1px solid #ddd;
-            text-decoration: none;
-            color: var(--ink);
-            font-family: 'Montserrat';
-            font-weight: 700;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            transition: 0.3s;
-        }
-
-        .eco-links a:hover { border-color: var(--accent-orange); color: var(--accent-orange); }
-
         footer {
             padding: 60px 20px;
             background: var(--ink);
@@ -281,29 +270,37 @@
         </div>
     </header>
 
+    <section class="blurb-section">
+        <div class="blurb-content">
+            <p>"Nick's engaging writing style makes readers feel as if they are sitting around a dining room table and chatting with good friends about the education profession."</p>
+            <p style="font-size: 0.9rem; font-style: normal; font-family: 'Montserrat'; text-transform: uppercase; letter-spacing: 2px; margin-top: 20px; color: var(--accent-orange);">— A must-read for all who love teaching</p>
+        </div>
+    </section>
+
     <section class="bio-section">
         <div class="bio-container">
             <div>
                 <h2 style="font-family: Playfair Display; font-size: 2.5rem; line-height: 1.2;">The Educator Behind the Handbook</h2>
-                <p style="font-size: 1.2rem; margin-top: 20px;"><strong>Nick Duda (M.S. Ed)</strong> is on a mission to help teachers reclaim the joy in their profession.</p>
-                <p>With 22 years of experience spanning urban districts, rural Illinois, and everything in between, Nick has seen firsthand the toll the modern classroom takes on educators. He is a veteran mentor who has received <strong>six consecutive "Excellent" evaluations</strong>, proving that fulfillment and professional success go hand-in-hand. Whether he's teaching Mathematics or consulting for districts, Nick focuses on what truly matters: the human connection and the mental well-being of the teacher.</p>
+                <p style="font-size: 1.2rem; margin-top: 20px;"><strong>Nick Duda (M.S. Ed)</strong> is a veteran educator and trained coach on a mission to help teachers reclaim the joy in their profession.</p>
+                <p>With 22 years of classroom experience, Nick has achieved <strong>six consecutive "Excellent" overall ratings</strong>—the highest tier of professional evaluation. Beyond his own classroom success, Nick has served as a dedicated <strong>New Teacher Mentor</strong> and successfully <strong>revamped a district-wide mentorship program</strong> to better support and retain incoming staff.</p>
+                <p>As a trained teacher coach, he combines battle-tested strategies with a deep focus on atmosphere and emotional well-being, ensuring that educators don't just survive their careers, but thrive in them.</p>
             </div>
             <div class="stats-grid">
                 <div class="stat-item">
-                    <h4>6/6 Evaluations</h4>
-                    <p>Consistent "Excellent" Ratings for Instructional Practice</p>
+                    <h4>Excellent Overall</h4>
+                    <p>Highest Tier Rating for 6 Consecutive Evaluations</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Program Architect</h4>
+                    <p>Revamped and led District Mentorship Programs</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Trained Coach</h4>
+                    <p>Specializing in Teacher Fulfillment & Positive Culture</p>
                 </div>
                 <div class="stat-item">
                     <h4>22+ Years</h4>
-                    <p>Battle-tested classroom experience in all environments</p>
-                </div>
-                <div class="stat-item">
-                    <h4>Fulfillment Expert</h4>
-                    <p>Personal Teacher & Life Coach for Professional Happiness</p>
-                </div>
-                <div class="stat-item">
-                    <h4>MS in Education</h4>
-                    <p>Master's Degree & Multi-Subject Certification</p>
+                    <p>Experience across Illinois urban and rural districts</p>
                 </div>
             </div>
         </div>
@@ -359,7 +356,7 @@
             </div>
             <div class="service-box">
                 <h3>Workshops & Speaking</h3>
-                <p>Engaging sessions for PD days focused on the Duda Model, mindfulness in the classroom, and creating a sustainable teaching life. See my STEM insights on <strong><a href="https://youtube.com/STEMwithMrDuda" style="color: var(--accent-orange); text-decoration: none;">YouTube</a></strong>.</p>
+                <p>Engaging sessions for PD days focused on the Duda Model, mindfulness in the classroom, and creating a sustainable teaching life.</p>
             </div>
         </div>
         <div style="text-align: center; margin-top: 40px;">
@@ -379,19 +376,7 @@
                 <a href="https://bookshop.org/p/books/the-modern-teacher-s-handbook-your-ultimate-guide-to-success-in-education-nick-duda/fd7aa561d473070d?ean=9798986450315&next=t&next=t&affiliate=89280" class="order-btn">
                     Paperback <span class="tag">Order via Bookshop.org</span>
                 </a>
-                <div class="order-btn" style="opacity: 0.5; cursor: not-allowed; border-style: dashed;">
-                    EBook <span class="tag">Digital Link Coming Soon</span>
-                </div>
             </div>
-        </div>
-    </section>
-
-    <section class="ecosystem">
-        <h3 style="font-family: Montserrat; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 2px;">Explore the World of Nick Duda</h3>
-        <div class="eco-links">
-            <a href="https://sawyersreachbook.com">Sawyer's Reach Book & Podcast</a>
-            <a href="https://askkaela.com">The Institute & AI Tools</a>
-            <a href="https://nickdudaauthor.com">Nick Duda Author Hub</a>
         </div>
     </section>
 
